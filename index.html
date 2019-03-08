@@ -1,12 +1,84 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Vincent</title>
-        <meta name="viewport" content="width=device-width">
-    </head>
-    <body>
-      <h1>Vincent</h1>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <style>
+      :root {
+        --spacing: 1rem;
+      }
+
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+      }
+
+      .element {
+        margin-bottom: var(--spacing);
+      }
+
+      .embed {
+        position: relative;
+      }
+
+      .embed:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 56.25%;
+      }
+      .embed > iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .masthead {
+        text-align: center;
+        margin-bottom: var(--spacing);
+      }
+
+      .masthead h1 {
+        display: inline-block;
+        border-bottom: solid 1px #000;
+        margin-bottom: var(--spacing);
+      }
+
+      .work article {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <h1>Spttrs</h1>
+      <img class="element" src="https://placehold.it/600x600" />
+    </header>
+    <div class="work">
+      <article>
+        <div>
+          <h1>Qurrent</h1>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas
+          </p>
+        </div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/XwSkQ_iFHyw"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </article>
+    </div>
+  </body>
 </html>
+
