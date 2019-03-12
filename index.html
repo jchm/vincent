@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Portfolio van Vincent Spitters.">
+
     <title>Spttrs</title>
     <style>
+      @import url('https://unpkg.com/normalize.css@8.0.1/normalize.css');
+
       :root {
         --spacing: 1rem;
-      }
-
-      a {
-        color: #000;
+        --primary: #000;
+        --body: #333;
       }
 
       html {
         font-family: Helvetica, Arial, sans-serif;
         font-size: 1em;
         line-height: 1.5;
+        color: var(--body);
+      }
+
+      /**
+       * Elements
+       */
+      a {
+        color: var(--primary);
       }
 
       .element {
         margin-bottom: var(--spacing);
       }
 
+      /**
+       * Components
+       */
       .masthead {
         text-align: center;
         margin-bottom: var(--spacing);
@@ -31,26 +44,26 @@
 
       .masthead h1 {
         display: inline-block;
-        border-bottom: solid 1px #000;
-        margin-bottom: var(--spacing);
+        border-bottom: solid 1px var(--primary);
       }
 
-      footer {
+      .contact {
         text-align: center;
       }
 
-      footer a {
+      .contact a {
         padding-right: 0.5rem;
       }
     </style>
   </head>
   <body>
-    <header class="masthead"><h1>Spttrs</h1></header>
-    <footer>
+    <header class="masthead">
+      <h1>Spttrs</h1>
+    </header>
+    <footer class="contact">
       <a href="https://www.instagram.com/ctrlaltdefeat_">Instagram</a>
       <a href="mailto:v.spitters@post.com">E-mail</a>
-      <span>PS4 Network: Funeralclub</span>
+      <span>PlayStation Network: Funeralclub</span>
     </footer>
   </body>
 </html>
-
