@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Portfolio van Vincent Spitters.">
+    <link rel="icon" href="favicon.ico" />
+
+    <title>Spttrs</title>
+    <style>
+      @import url('https://unpkg.com/normalize.css@8.0.1/normalize.css');
+
+      :root {
+        --spacing: 1rem;
+        --spacing-large: 3rem;
+        --primary: #000;
+        --body: #333;
+
+        --qurrent: #ffd400;
+      }
+
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+        color: var(--body);
+      }
+
+      /**
+       * Elements
+       */
+      a {
+        color: var(--primary);
+      }
+
+      .element {
+        margin-bottom: var(--spacing);
+      }
+
+      /**
+       * Components
+       */
+      .masthead {
+        text-align: center;
+        margin-bottom: var(--spacing-large);
+      }
+
+      .masthead h1 {
+        display: inline-block;
+        border-bottom: solid 1px var(--primary);
+      }
+
+      .project {
+        position: relative;
+
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: minmax(min-content, 600px) 1fr;
+        grid-template-areas: "title title" "content video";
+
+        padding: var(--spacing-large);
+
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+
+        .project::before {
+          content: '';
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          left: calc(50% - 50vw);
+          z-index: -1;
+        }
+
+      .project h1 {
+        grid-area: title;
+        margin: 0;
+      }
+
+      .project .content {
+        grid-area: content;
+      }
+
+      .project .video {
+        grid-area: video;
+
+        position: relative;
+        padding-bottom: 56.25%; /*16:9*/
+        height: 0;
+        overflow: hidden;
+      }
+
+      .qurrent::before   {
+        background-color: var(--qurrent);
+      }
+
+      .project .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact a {
+        padding-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <h1>Spttrs</h1>
+      <div class="content">
+          <a href="https://www.instagram.com/ctrlaltdefeat_">Instagram</a>
+          <a href="mailto:v.spitters@post.com">E-mail</a>
+          <span>PlayStation Network: Funeralclub</span>
+      </div>
+    </header>
+    <section class="work">
+      <article class="project | qurrent">
+        <h1>Qurrent</h1>
+        <div class="content">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/huaE85-V8u4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
